@@ -2,7 +2,7 @@
   <div class="container">
     <div class="navbar-header">
       <a class="navbar-brand" href="#"
-      >Spring Boot 3+ PostgreSQL + Vue 3 CRUD Application</a
+      >Products Tech</a
       ><br/><br/>
     </div>
     <router-view/>

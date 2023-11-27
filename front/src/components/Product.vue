@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h3>User</h3>
+    <h3>Product</h3>
     <div class="container">
       <form @submit="validateAndSubmit">
         <div v-if="errors.length">
@@ -30,10 +30,10 @@
   </div>
 </template>
 <script>
-import UserDataService from "../service/UserDataService";
+import ProductDataService from "../service/ProductDataService";
 
 export default {
-  name: "User",
+  name: "Product",
   data() {
     return {
       firstName: "",
@@ -48,8 +48,8 @@ export default {
     },
   },
   methods: {
-    refreshUserDetails() {
-      UserDataService.retrieveUser(this.id).then((res) => {
+    refreshProductDetails() {
+      ProductDataService.retrieveProduct(this.id).then((res) => {
         this.firstName = res.data.firstName;
         this.lastName = res.data.lastName;
         this.emailId = res.data.emailId;
@@ -70,7 +70,7 @@ export default {
       }
       if (this.errors.length === 0) {
         if (this.id == -1) {
-          UserDataService.createUser({
+          ProductDataService.createProduct({
             firstName: this.firstName,
             lastName: this.lastName,
             emailId: this.emailId,
@@ -78,7 +78,7 @@ export default {
             this.$router.push("/");
           });
         } else {
-          UserDataService.updateUser(this.id, {
+          ProductDataService.updateProduct(this.id, {
             id: this.id,
             firstName: this.firstName,
             lastName: this.lastName,
@@ -91,7 +91,7 @@ export default {
     },
   },
   created() {
-    this.refreshUserDetails();
+    this.refreshProductDetails();
   },
 };
 </script>
