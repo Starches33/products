@@ -1,4 +1,4 @@
-package crud.app.back.exception;
+package products.app.back.exception;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 

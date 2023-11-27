@@ -1,4 +1,4 @@
-package crud.app.back.entity;
+package products.app.back.entity;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -8,8 +8,8 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name = "userTable")
-public class User {
+@Table(name = "product_table")
+public class Product {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
@@ -20,10 +20,10 @@ public class User {
     @Column(name = "email_id")
     private String emailId;
 
-    public User() {
+    public Product() {
     }
 
-    public User(String firstName, String lastName, String emailId) {
+    public Product(String firstName, String lastName, String emailId) {
         super();
         this.firstName = firstName;
         this.lastName = lastName;

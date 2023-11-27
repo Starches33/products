@@ -1,4 +1,4 @@
-package crud.app.back.exception;
+package products.app.back.exception;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
