@@ -1,0 +1,4 @@
+/back/.gradle/
+/back/build/
+/.idea/
+/front/node_modules/
